@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Studio Admin is a responsive admin dashboard built with Next.js 16, React 19, TypeScript, Tailwind CSS v4, and shadcn/ui.
+Dimension CRM is a responsive Enterprise Customer Relationship & Sales Management Platform built with Next.js 16, React 19, TypeScript, Tailwind CSS v4, and shadcn/ui.
 
 This repository uses the shadcn `radix-nova` style. The shadcn CLI reports `base: "radix"`, which refers to Radix UI. Always inspect the local components in `src/components/ui/` because individual wrappers may use different primitives.
 
@@ -54,8 +54,9 @@ There is currently no automated test command. Run build, lint, check, or other v
 
 Keep feature code close to the route that owns it.
 
-- Dashboard routes: `src/app/(main)/dashboard/<screen>/page.tsx`
-- Screen-specific components, data, and schemas: `src/app/(main)/dashboard/<screen>/_components/`
+- CRM routes: `src/app/(main)/dashboard/dimension/<screen>/page.tsx`
+- Screen-specific components, data, and schemas: `src/app/(main)/dashboard/dimension/<screen>/_components/`
+- Shared CRM mock data: `src/data/dimension/`
 - Shared dashboard components: `src/app/(main)/dashboard/_components/`
 - Shared application components: `src/components/`
 - Local shadcn components: `src/components/ui/`
@@ -66,7 +67,7 @@ Keep a component inside its route until it is reused by another feature. Do not 
 
 ## Creating or extending a screen
 
-1. Inspect the closest current screen before writing code. Finance, Infrastructure, CRM, and Analytics are useful references. Do not use routes under `(legacy)` as references for new screens unless maintaining a legacy route.
+1. Inspect the closest current screen under `src/app/(main)/dashboard/dimension/` before writing code — Deals, Pipeline, and Reports are useful references for tables, Kanban, and chart-driven layouts respectively.
 2. When reproducing a UI from a screenshot or image, follow its visual direction closely, including layout, hierarchy, spacing, component structure, and important details. Implement it with the project's existing components and semantic theme tokens rather than copying raw color values. If the design needs a color that is not available through the existing theme tokens, or the user explicitly requests a non-theme color, use a named color from Tailwind's default palette. Do not use arbitrary hex, RGB, HSL, or OKLCH values.
 3. Reuse the existing dashboard shell, local components, layout controls, and theme tokens.
 4. Break each new page into focused components inside the route's `_components/` directory. Keep `page.tsx` small and focused on composing those pieces.
