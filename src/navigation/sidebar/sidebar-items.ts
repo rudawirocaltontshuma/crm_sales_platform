@@ -1,16 +1,26 @@
 import {
   Banknote,
+  Boxes,
+  Briefcase,
+  Building2,
   Calendar,
   ChartBar,
   CheckSquare,
+  ClipboardList,
+  Contact,
+  FileText,
   Fingerprint,
   FolderOpen,
   Forklift,
   Gauge,
+  Gem,
   GraduationCap,
+  Headset,
   HeartPulse,
   Kanban,
   LayoutDashboard,
+  LifeBuoy,
+  LineChart,
   ListTodo,
   Lock,
   type LucideIcon,
@@ -20,8 +30,10 @@ import {
   Server,
   ShoppingBag,
   SquareArrowUpRight,
+  Target,
   UserRound,
   Users,
+  UsersRound,
 } from "lucide-react";
 
 export type NavBadge = "new" | "soon";
@@ -63,6 +75,29 @@ export interface NavGroup {
 }
 
 export const sidebarItems: NavGroup[] = [
+  {
+    id: 0,
+    label: "NEXORA CRM",
+    items: [
+      { id: "nexora-overview", title: "Overview", url: "/dashboard/nexora", icon: Gauge },
+      { id: "nexora-leads", title: "Leads", url: "/dashboard/nexora/leads", icon: Target },
+      { id: "nexora-contacts", title: "Contacts", url: "/dashboard/nexora/contacts", icon: Contact },
+      { id: "nexora-companies", title: "Companies", url: "/dashboard/nexora/companies", icon: Building2 },
+      { id: "nexora-deals", title: "Deals", url: "/dashboard/nexora/deals", icon: Briefcase },
+      { id: "nexora-pipeline", title: "Pipeline", url: "/dashboard/nexora/pipeline", icon: Kanban },
+      { id: "nexora-activities", title: "Activities", url: "/dashboard/nexora/activities", icon: ClipboardList },
+      { id: "nexora-tasks", title: "Tasks", url: "/dashboard/nexora/tasks", icon: CheckSquare },
+      { id: "nexora-calendar", title: "Calendar", url: "/dashboard/nexora/calendar", icon: Calendar },
+      { id: "nexora-teams", title: "Sales Teams", url: "/dashboard/nexora/sales-teams", icon: UsersRound },
+      { id: "nexora-products", title: "Products", url: "/dashboard/nexora/products", icon: Boxes },
+      { id: "nexora-quotes", title: "Quotes", url: "/dashboard/nexora/quotes", icon: FileText },
+      { id: "nexora-customers", title: "Customers", url: "/dashboard/nexora/customers", icon: Gem },
+      { id: "nexora-support", title: "Support", url: "/dashboard/nexora/support", icon: Headset },
+      { id: "nexora-reports", title: "Reports", url: "/dashboard/nexora/reports", icon: LineChart },
+      { id: "nexora-analytics", title: "Analytics", url: "/dashboard/nexora/analytics", icon: ChartBar },
+      { id: "nexora-settings", title: "Settings", url: "/dashboard/nexora/settings", icon: LifeBuoy },
+    ],
+  },
   {
     id: 1,
     label: "Dashboards",
