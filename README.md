@@ -1,10 +1,14 @@
-# Next.js Admin Template with TypeScript & Shadcn UI
+# Dimension CRM — Enterprise Customer Relationship & Sales Platform
 
-**Studio Admin** - Includes multiple dashboards, authentication layouts, customizable theme presets, and more.
+**Dimension CRM** is a frontend-only, portfolio-grade Enterprise CRM & Sales Management Platform built on top of **Studio Admin**, a Next.js/TypeScript/Shadcn UI admin template. It ships with multiple dashboards, authentication layouts, customizable theme presets, and a full CRM suite driven entirely by deterministic mock data — no backend, no database, no auth, and no persistence.
 
 <img src="https://github.com/arhamkhnz/next-shadcn-admin-dashboard/blob/main/media/dashboard.png?version=5" alt="Dashboard Screenshot">
 
 Most admin templates I found, free or paid, felt cluttered, outdated, or too rigid. I built this as a cleaner alternative with features often missing in others, such as theme toggling and layout controls, while keeping the design modern, minimal, and flexible.
+
+## Dimension CRM
+
+Under `/dashboard/dimension`, this project adds a complete enterprise CRM module: Dashboard, Leads, Contacts, Companies, Deals, Pipeline (Kanban), Activities, Tasks, Calendar, Sales Teams, Products, Quotes, Customers, Support, Reports, Analytics, and Settings. Every screen is powered by a seeded mock dataset (250+ leads, 300+ contacts, 150+ companies, 200+ deals, 400+ activities, 200+ tasks, 100+ products, 100+ tickets) in `src/data/dimension/`, so the data is realistic and stable across builds but entirely fictional — this is a frontend demonstration, not a connected product.
 
 > **View demo:** [studio admin](https://next-shadcn-admin-dashboard.vercel.app)
 
@@ -26,6 +30,7 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 - Flexible layouts (collapsible sidebar, variable content widths)  
 - Authentication flows and screens  
 - Prebuilt dashboards (Default, CRM, Finance, Analytics, Productivity) plus legacy variants  
+- **Dimension CRM** — a full enterprise CRM & sales-management module (Leads, Contacts, Companies, Deals, Pipeline, Activities, Tasks, Calendar, Sales Teams, Products, Quotes, Customers, Support, Reports, Analytics) with 1,500+ generated mock records  
 - Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support *(planned)*  
 
 > [!NOTE]
@@ -60,6 +65,7 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 ### Available
 - Default Dashboard  
 - CRM Dashboard  
+- Dimension CRM (Dashboard, Leads, Contacts, Companies, Deals, Pipeline, Activities, Tasks, Calendar, Sales Teams, Products, Quotes, Customers, Support, Reports, Analytics, Settings)  
 - Finance Dashboard  
 - Analytics Dashboard  
 - Productivity Dashboard  
@@ -105,12 +111,12 @@ _Deploy your own copy with one click._
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/arhamkhnz/next-shadcn-admin-dashboard.git
+   git clone https://github.com/rudawirocaltontshuma/crm_sales_platform.git
    ```
    
 2. **Navigate into the project**
    ```bash
-    cd next-shadcn-admin-dashboard
+    cd crm_sales_platform
    ```
    
 3. **Install dependencies**
