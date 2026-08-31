@@ -1,6 +1,6 @@
-# Contributing to Studio Admin
+# Contributing to Dimension CRM
 
-Thanks for showing interest in improving **Studio Admin** (repo: `next-shadcn-admin-dashboard`).  
+Thanks for showing interest in improving **Dimension CRM** (repo: `crm_sales_platform`), built on the **Studio Admin** template.  
 This guide will help you set up your environment and understand how to contribute.
 
 ---
@@ -23,6 +23,7 @@ src
 │   ├── (main)        # Main dashboard routes
 │   │   └── (dashboard)
 │   │       ├── crm
+│   │       ├── dimension     # Dimension CRM module (leads, deals, pipeline, etc.)
 │   │       ├── finance
 │   │       ├── default
 │   │       └── ...
@@ -44,16 +45,16 @@ If you’d like a more detailed example of this setup, check out the [Next Coloc
 
 1. Fork the Repository
    
-   Click [here](https://github.com/arhamkhnz/next-shadcn-admin-dashboard/fork) to fork the repository.
+   Click [here](https://github.com/rudawirocaltontshuma/crm_sales_platform/fork) to fork the repository.
 
 2. Clone the Repository  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/next-shadcn-admin-dashboard.git
+   git clone https://github.com/YOUR_USERNAME/crm_sales_platform.git
    ```
    
 3. Navigate into the Project  
    ```bash
-   cd next-shadcn-admin-dashboard
+   cd crm_sales_platform
    ```
 
 4. **Install dependencies**
@@ -90,7 +91,8 @@ If you’d like a more detailed example of this setup, check out the [Next Coloc
 
 - **External Pages**: Landing pages or other non-dashboard routes → `src/app/(external)/`  
 - **Auth Screens**: Login, register, and authentication layouts → `src/app/(main)/auth/`  
-- **Dashboard Screens**: Feature dashboards like CRM, Finance, Analytics → `src/app/(main)/dashboard/`
+- **Dashboard Screens**: Feature dashboards like CRM, Finance, Analytics → `src/app/(main)/dashboard/`  
+- **Dimension CRM**: CRM module screens (leads, deals, pipeline, etc.) → `src/app/(main)/dashboard/dimension/`, mock data → `src/data/dimension/`
 - **Components**: Reusable UI goes in `src/components/`  
 - **Hooks**: Custom logic goes in `src/hooks/`  
 - **Themes**: New presets under `src/styles/presets/`  
@@ -118,7 +120,7 @@ If you’d like a more detailed example of this setup, check out the [Next Coloc
 
 ## Questions & Support
 
-- Report bugs, suggestions, or issues via [GitHub Issues](https://github.com/arhamkhnz/next-shadcn-admin-dashboard/issues)
+- Report bugs, suggestions, or issues via [GitHub Issues](https://github.com/rudawirocaltontshuma/crm_sales_platform/issues)
 
 ---
 
