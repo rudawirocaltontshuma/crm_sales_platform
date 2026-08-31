@@ -146,7 +146,7 @@ export function ActivityFeed({
 
                 return (
                   <li key={activity.id} className="relative">
-                    <span className="-left-[2.05rem] absolute top-0 flex size-7 items-center justify-center rounded-full border bg-background text-muted-foreground">
+                    <span className="absolute top-0 -left-[2.05rem] flex size-7 items-center justify-center rounded-full border bg-background text-muted-foreground">
                       <Icon className="size-3.5" />
                     </span>
                     <div className="flex flex-col gap-1">

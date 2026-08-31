@@ -238,7 +238,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
             <ol className="relative space-y-6 border-border/70 border-l pl-6">
               {timeline.map((entry) => (
                 <li key={entry.id} className="relative">
-                  <span className="-left-[1.65rem] absolute top-1.5 size-2.5 rounded-full bg-primary" />
+                  <span className="absolute top-1.5 -left-[1.65rem] size-2.5 rounded-full bg-primary" />
                   <p className="font-medium text-sm">{entry.label}</p>
                   <p className="text-muted-foreground text-sm">{entry.detail}</p>
                   <p className="text-muted-foreground text-xs">{formatDate(entry.date)}</p>

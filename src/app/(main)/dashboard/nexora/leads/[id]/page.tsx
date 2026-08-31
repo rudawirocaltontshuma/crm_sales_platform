@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         }
       />
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 md:gap-6">
+      <div className="grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-3">
         <div className="space-y-4 md:space-y-6 lg:col-span-2">
           <InfoCard title="Lead details" description="Everything captured during intake and qualification.">
             <FieldList

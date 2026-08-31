@@ -291,6 +291,12 @@ export const products: Product[] = Array.from({ length: 108 }, (_, index) => {
 
 const leadRandom = createRandom(77021);
 
+function ratingFromScore(score: number): Lead["rating"] {
+  if (score >= 70) return "Hot";
+  if (score >= 45) return "Warm";
+  return "Cold";
+}
+
 const LEAD_STATUS_WEIGHTS: readonly (readonly [LeadStatus, number])[] = [
   ["New", 26],
   ["Contacted", 22],
@@ -309,6 +315,7 @@ export const leads: Lead[] = Array.from({ length: 268 }, (_, index) => {
     linkedCompany?.name ??
     `${COMPANY_PREFIXES[(index * 9 + 4) % COMPANY_PREFIXES.length]} ${COMPANY_SUFFIXES[(index * 7 + 1) % COMPANY_SUFFIXES.length]}`;
   const score = randomInt(leadRandom, 12, 98);
+  const source = pick(leadRandom, LEAD_SOURCES);
 
   return {
     id: padId("LED", index + 1),
@@ -322,9 +329,9 @@ export const leads: Lead[] = Array.from({ length: 268 }, (_, index) => {
     companyId: linkedCompany?.id ?? null,
     title: pick(leadRandom, JOB_TITLES),
     status: weighted(leadRandom, LEAD_STATUS_WEIGHTS),
-    source: pick(leadRandom, LEAD_SOURCES),
+    source,
     score,
-    rating: score >= 70 ? "Hot" : score >= 45 ? "Warm" : "Cold",
+    rating: ratingFromScore(score),
     estimatedValue: randomInt(leadRandom, 6, 240) * 1000,
     ownerId: salesReps[index % salesReps.length].id,
     region: location.region,
@@ -333,7 +340,7 @@ export const leads: Lead[] = Array.from({ length: 268 }, (_, index) => {
     industry: linkedCompany?.industry ?? INDUSTRIES[(index * 2) % INDUSTRIES.length],
     createdAt: toIsoDate(dateOffset(leadRandom, -280, -1)),
     lastContactedAt: toIsoDate(dateOffset(leadRandom, -90, 0)),
-    notes: `Inbound interest from ${companyName} captured via ${"the"} channel. Awaiting qualification checkpoint with the buying group.`,
+    notes: `Inbound interest from ${companyName} captured via the ${source.toLowerCase()} channel. Awaiting qualification checkpoint with the buying group.`,
   };
 });
 

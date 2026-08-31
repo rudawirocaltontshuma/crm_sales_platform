@@ -95,7 +95,7 @@ function DragBoard({ deals }: { deals: Deal[] }) {
   function handleDragEnd(event: DragEndEvent) {
     const source = event.operation.source;
 
-    if (!source || source.type !== "deal") return;
+    if (source?.type !== "deal") return;
 
     // Re-stamp every card with the stage of the column it now lives in.
     setBoard((current) => {

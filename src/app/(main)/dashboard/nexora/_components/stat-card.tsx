@@ -27,7 +27,7 @@ export function StatCard({ label, value, delta, hint, icon: Icon }: StatCardProp
       </CardHeader>
       <CardContent className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-medium text-2xl leading-none tracking-tight tabular-nums lg:text-3xl">{value}</span>
+          <span className="font-medium text-2xl tabular-nums leading-none tracking-tight lg:text-3xl">{value}</span>
           {delta === undefined ? null : (
             <Badge
               variant="outline"
